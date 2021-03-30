@@ -1,0 +1,46 @@
+plugins {
+    id "java"
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+}
+
+group "com.colosas"
+version "0.1"
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "paper-repo"
+        url "https://papermc.io/repo/repository/maven-public/"
+    }
+    maven {
+        name = "worldedit-repo"
+        url "https://mvn.intellectualsites.com/content/repositories/releases/"
+    }
+    maven {
+        name = "sonatype-oss-snapshots"
+        url = "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
+
+dependencies {
+    implementation group: 'commons-io', name: 'commons-io', version: '2.8.0'
+    implementation "net.kyori:adventure-api:4.4.0"
+    implementation 'org.jetbrains:annotations:20.1.0'
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.6.0"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"
+    compileOnly "com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT"
+    compileOnly "com.intellectualsites.fawe:FAWE-Bukkit:1.16-583"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+shadowJar {
+    destinationDirectory.set(file("C:/Users/carri/Desktop/BungeeCord/sw1/plugins"))
+}
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs << '-Xlint:unchecked'
+    options.deprecation = true
+}

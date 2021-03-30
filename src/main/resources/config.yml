@@ -1,0 +1,45 @@
+# Same name as defined in your bungee config.yml
+serverName: ""
+socketPort: 0
+
+game:
+  name: ""
+  maxPlayers: 8
+  minPlayers: 4
+  world: world
+  teleportCountdown: 20
+  startCountdown: 10
+  items: []
+  itemBlackList: []
+
+maps: {}
+
+messages:
+  join: "&7[&a+&7] %player% &7(%playerCount%/%maxPlayers%)"
+  leave: "&7[&c-&7] %player% &7(%playerCount%/%maxPlayers%)"
+  canceled: "&7[&6!&7] Too many players left, so the countdown has been canceled."
+  started: "&7[&6!&7] The game has started!"
+  kill:
+    withoutAttacker: "&7[&cKILL&7] &c%victim% &7died."
+    withAttacker: "&7[&cKILL&7] &c%victim% &7was killed by &c%attacker%&7."
+  teleportCountdown:
+    chat: ""
+    teleported: "&7[&6!&7] You have been teleported!"
+    actionBar: true
+    title:
+      - 20
+      - 10
+      - 5
+      - 4
+      - 3
+      - 2
+      - 1
+  startCountdown:
+    chat: ""
+    actionBar: true
+    title:
+      - 10
+      - 3
+      - 2
+      - 1
+  winner: "&7[&6!&7] %player% &7wins!"

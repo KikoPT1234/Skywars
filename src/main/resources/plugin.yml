@@ -1,0 +1,16 @@
+name: SkywarsColosas
+version: 0.5
+api-version: 1.16
+main: com.colosas.skywars.Skywars
+author: KikoPT
+depend:
+  - FastAsyncWorldEdit
+
+commands:
+  toworld: {}
+  addspawnpoint: {}
+  setlobbypoint: {}
+  setspectatorpoint: {}
+  test: {}
+  swrl: {}
+
